@@ -6,7 +6,7 @@ on:
       - Dev
       - Testing
       - Staging
-      - Prod
+      - Production
       - Hotfix
 jobs:
   Development:
