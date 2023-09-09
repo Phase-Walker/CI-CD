@@ -6,9 +6,9 @@ name: CI
 on:
   # Added merge groups for merge queues.
   push:
-    branches: [ "Dev", "Testing", "Staging", "Prod", "Hotfix"]
+    branches: [ "dev", "testing", "staging", "production", "hotfix"]
   pull_request:
-    branches: [ "Dev", "Testing", "Staging", "Prod", "Hotfix"]
+    branches: [ "dev", "testing", "staging", "production", "hotfix"]
   merge_group:
     branches: [checks_requested]
 
