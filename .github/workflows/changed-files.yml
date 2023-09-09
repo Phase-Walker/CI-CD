@@ -2,7 +2,7 @@ name: changed-files
 
 on:
   pull_request:
-    branches: [ "Dev", "Testing", "Staging", "Prod", "Hotfix"]
+    branches: [ "Dev", "Testing", "Staging", "Production", "Hotfix"]
 
 jobs:
   # ------------------------------------------------------------------------------------------------------------------------------------------------
