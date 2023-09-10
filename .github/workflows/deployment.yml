@@ -9,12 +9,9 @@ on:
       - production
       - hotfix
 jobs:
-EnvSelection:
-runs-on: ubuntu-latest
-rules:
 
-- if: github.ref == 'refs/heads/dev-feature' 
   Development:
+    if: github.ref == 'refs/heads/dev-feature' 
     runs-on: ubuntu-latest
     # run this job only for the Dev branch
     environment: 
@@ -25,9 +22,9 @@ rules:
         run: echo "Hello Development!"
         # ...deployment-specific steps
 
-- if: github.ref == 'refs/heads/dev' 
   Testing:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/dev' 
     environment:
       name: Testing
       url: https://github.com
@@ -36,8 +33,8 @@ rules:
         run: echo "Hello Testing!"
         # ...deployment-specific steps
 
-- if: github.ref == 'refs/heads/testing'       
   Staging:
+    if: github.ref == 'refs/heads/testing'      
     runs-on: ubuntu-latest
     environment: 
       name: Staging
@@ -46,9 +43,9 @@ rules:
       - name: deploy to Staging
         run: echo "Hello Staging!"
         # ...deployment-specific steps
-
-- if: github.ref == 'refs/heads/staging' 
+        
   Production:
+    if: github.ref == 'refs/heads/staging' 
     runs-on: ubuntu-latest
     environment: 
       name: Production
