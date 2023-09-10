@@ -33,6 +33,7 @@ jobs:
         # ...deployment-specific steps
 
   Staging:
+
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/testing' 
     environment: 
@@ -44,6 +45,7 @@ jobs:
         # ...deployment-specific steps
 
   Production:
+
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/staging' 
     environment: 
