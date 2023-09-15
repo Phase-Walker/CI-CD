@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Count: 6
+=======
+Count: 5
+>>>>>>> staging
